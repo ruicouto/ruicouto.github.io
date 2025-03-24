@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <meta name="color-scheme" content="dark light">
+  
+  <head><script src="assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Rui Couto · UX &amp; Project Manager</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/dist/css/style.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <!--
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  -->
+    
+<header data-bs-theme="dark">
+
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="assets/brand/logo.png"/></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          
+        </ul>
+
+
+        <form class="d-flex" role="search">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active"  onclick="jumpto('work-experience')">Work experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"  onclick="jumpto('projects')">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"  onclick="jumpto('education')">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"  onclick="jumpto('other')">Other resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"  onclick="jumpto('hobby')">Hobby</a>
+            </li>
+          </ul>
+          
+        </form>
+      
+  </nav>
+  
+</header>
+
+
+<main>
+
+  <div class="container marketing">
+  
+    <!-- START THE FEATURETTES -->
+
+
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="display-6">Rui Couto <span class="text-body-secondary">UX & Product Manager</span></h2>
+        
+        <p class="mb-4em">Product Leader (UX & PM) crafting data-driven experiences that bridge user needs, business goals, and technology. Proven track record in driving adoption and usability for complex products.</p>       
+
+
+        <div class="row mb-6em">
+          <div class="column">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm d-flex justify-content-center align-items-center">
+                  <a href="assets/resume.pdf" target="_blank" class="button"><i class="fa-solid fa-download"></i> Get resume</a>
+                </div>
+                <div class="col-sm d-flex justify-content-center align-items-center">
+                  <a href="https://www.linkedin.com/in/rmscouto/" target="_blank" class="button"><i class="fa-solid fa-message"></i> Contact-me</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5 offset-md-1 d-flex justify-content-center align-items-center">
+        <img src="assets/brand/profile.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid" width="300" height="300" alt="Profile Image">
+      </div>
+
+    
+
+    </div>
+
+    <!-- Work experience-->
+    <div class="entry" id="work-experience" >
+      <h4>Work experience</h4>
+      <hr class="divider-thin" />
+
+      <blockquote class="blockquote">
+        
+        <small class="text-gray tiny" class="in">2020 - present</small>
+        <p class="small">&#x2022; Product lead (UX) and Team lead at <a href="https://outsystems.com" target="_blank">OutSystems</a> R&D</p>
+
+        <small class="text-gray tiny" class="small">2017 - 2020</small>
+        <p class="small">&#x2022; Senior Researcher at <a href="https://www.inesctec.pt/en/centres/haslab" target="_blank">INESC TEC & HASLab</a>, at University of Minho</p>
+        
+        <small class="text-gray tiny" class="small">2014 - 2020</small>
+        <p class="small">&#x2022; Invited assistant professor at University of Minho</p>
+
+      </blockquote>
+    </div>
+
+
+    <!-- projects -->
+    <div class="entry" id="projects" >
+      <h4>Projects</h4>
+      <hr class="divider-thin" />
+
+      <blockquote class="blockquote">
+        
+        <small class="text-gray tiny" class="in">2019 - 2022</small>
+        <p class="small">&#x2022; Co-founder and advisor at <a href="https://www.startupbraga.com/community/wecancharge" target="_blank">WeCanCharge</a></p>
+
+        <small class="text-gray tiny" class="in">2018 - 2020</small>
+        <p class="small">&#x2022; Full stack &amp; mobile developer. Technological and product advisor at <a href="https://www.instagram.com/juntarajunta/" target="_blank">JuntarAJunta</a></p>
+
+        <small class="text-gray tiny" class="small">2018 - 2019</small>
+        <p class="small">&#x2022; Author &amp; Full stack developer of <a href="https://www.facebook.com/blocoshop/" target="_blank">BlocoShop</a></p>
+        
+      </blockquote>
+    </div>
+
+    <!-- Education -->
+    <div class="entry" id="education" >
+      <h4>Education</h4>
+      <hr class="divider-thin" />
+      <blockquote class="blockquote">
+        
+        <small class="text-gray tiny" class="in">2012 - 2017</small>
+        <p class="small">&#x2022; PhD in informatics <a href="https://repositorium.sdum.uminho.pt/handle/1822/48650" target="_blank">Pattern Based Software Development</a> at University of Minho</p>
+
+        <small class="text-gray tiny" class="in">2009 - 2012</small>
+        <p class="small">&#x2022; MsC in informatics <a href="https://repositorium.sdum.uminho.pt/handle/1822/27963" target="_blank">Pattern inference from Java code (PT)</a>  at University of Minho</p>   
+
+      </blockquote>
+    </div>
+
+
+    <!-- Other resources -->
+    <div class="entry" id="other" >
+      <h4>Other resources</h4>
+      <hr class="divider-thin" />
+      <blockquote class="blockquote">
+        
+        <p class="small">&#x2022; <a href="https://medium.com/@rmscouto" target="_blank">Medium articles</a></p>
+        <p class="small">&#x2022; <a href="https://scholar.google.com/citations?user=QEL9Ut0AAAAJ&hl=pt-PT&oi=ao" target="_blank">Google Scholar articles</a></p>   
+
+      </blockquote>
+    </div>
+
+    <!-- Hobby -->
+    <div class="entry" id="hobby" >
+      <h4>Hobby</h4>
+      <hr class="divider-thin" />
+      <blockquote class="blockquote">
+        
+        <p class="small">&#x2022; Board gaming and content creation</p>
+        <p class="small">&#x2022; Board game design</p>
+        <p class="small">&#x2022; Lego collector</p>
+        <p class="small">&#x2022; Retro gaming</p>
+
+      </blockquote>
+    </div>
+
+
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; Rui Couto &middot; <script>document.write(new Date().getFullYear());</script> </p>
+  </footer>
+</main>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+    </body>
+    <script>
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+  </script>
+  
+</html>
