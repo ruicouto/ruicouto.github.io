@@ -22,6 +22,14 @@ a {
     height: 30px;
 }
 
+.page-title {
+  padding-top: 2em;
+}
+
+.featurette {
+  margin-bottom: 4em;
+}
+
 a.button {
     border: 1px solid #EE5A5B;
     padding-left: 12px;
