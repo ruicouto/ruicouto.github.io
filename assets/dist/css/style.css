@@ -164,3 +164,13 @@ nav {
     margin-right: auto;
     margin-left: auto;
 }
+
+.badge {
+    font-size: 0.9em;
+    font-weight: 400;
+    padding: 0.6em 0.8em;
+    border-radius: 0.5em;
+    color: #fff;
+    background-color: #353551 ;
+
+}
